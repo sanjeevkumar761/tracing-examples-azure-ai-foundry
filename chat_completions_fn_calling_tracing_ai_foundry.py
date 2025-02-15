@@ -22,7 +22,7 @@ load_dotenv()
 
 project_client = AIProjectClient.from_connection_string(
     credential=DefaultAzureCredential(),
-    conn_str="eastus.api.azureml.ms;24304329-da71-44a3-b653-7fcc08964744;newazureai;sanjeku-0128",
+    conn_str=os.getenv("AZURE_AI_PROJECT_CONN_STRING"),
 )
 
 # [START trace_setting]
